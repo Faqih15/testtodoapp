@@ -2,9 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import { HiPlus } from "react-icons/hi";
 import Card from "./Card";
 import axios from "axios";
+import Tabel from "./Tabel";
 
 export default function App() {
   const [todo, tambahtodo] = useState([]);
+  const [tabel, plustabel] = useState([]);
   const [warna, gantiwarna] = useState(["red", "orange", "lime"]);
 
   useEffect(() => {
@@ -13,17 +15,6 @@ export default function App() {
       tambahtodo(respon.data);
     });
   }, []);
-
-  // const ganti = () => {
-  //   setindex(index + 1);
-  // };
-
-  // const ganti = (i) => {
-  //   const url = "http://localhost:3005/post";
-  //   const ctodo = JSON.parse(JSON.stringify(todo));
-  //   ctodo[i].warna++;
-  //   tambahtodo(ctodo);
-  // };
 
   const ubah = (id, i) => {
     const url = "http://localhost:3005/post/" + id;
@@ -55,15 +46,6 @@ export default function App() {
     data.target.label.value = "";
   };
 
-  // const fungsitambah = (e) => {
-  //   e.preventDefault();
-  //   const label = e.target.label.value;
-  //   const ctodo = JSON.parse(JSON.stringify(todo));
-  //   ctodo.push({ label, warna: 0 });
-  //   tambahtodo(ctodo);
-  //   e.target.label.value = "";
-  // };
-
   return (
     <div className="grid grid-cols-2 gap-10">
       <div className="p-10 mx-auto w-full">
@@ -71,7 +53,7 @@ export default function App() {
         <div className=" space-y-5 m-5 w-full">
           {todo?.map((data, idx) => {
             return (
-              <Card
+              <Tabel
                 key={idx}
                 bgColor={warna[data.warna % warna.length]}
                 ubah={ubah}
@@ -100,3 +82,23 @@ export default function App() {
     </div>
   );
 }
+
+// const fungsitambah = (e) => {
+//   e.preventDefault();
+//   const label = e.target.label.value;
+//   const ctodo = JSON.parse(JSON.stringify(todo));
+//   ctodo.push({ label, warna: 0 });
+//   tambahtodo(ctodo);
+//   e.target.label.value = "";
+// };
+
+// const ganti = () => {
+//   setindex(index + 1);
+// };
+
+// const ganti = (i) => {
+//   const url = "http://localhost:3005/post";
+//   const ctodo = JSON.parse(JSON.stringify(todo));
+//   ctodo[i].warna++;
+//   tambahtodo(ctodo);
+// };

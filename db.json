@@ -3,7 +3,7 @@
     {
       "label": "satu",
       "status": "todo",
-      "warna": 6,
+      "warna": 12,
       "id": 1
     },
     {
@@ -17,6 +17,18 @@
       "status": "todo",
       "warna": 7,
       "id": 3
+    },
+    {
+      "label": "empat",
+      "status": "todo",
+      "warna": 0,
+      "id": 4
+    },
+    {
+      "label": "lima",
+      "status": "todo",
+      "warna": 0,
+      "id": 5
     }
   ]
 }

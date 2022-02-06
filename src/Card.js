@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 
 export default function Card(tello) {
-  //   const color = { peyek };
-  // console.log(index);
-  // console.log(peyek);
-
   return (
     <div
       style={{
