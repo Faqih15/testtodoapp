@@ -1,0 +1,22 @@
+{
+  "post": [
+    {
+      "label": "satu",
+      "status": "todo",
+      "warna": 5,
+      "id": 1
+    },
+    {
+      "label": "dua",
+      "status": "todo",
+      "warna": 2,
+      "id": 2
+    },
+    {
+      "label": "tiga",
+      "status": "todo",
+      "warna": 7,
+      "id": 3
+    }
+  ]
+}
