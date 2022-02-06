@@ -8,9 +8,6 @@ export default function App() {
   const [warna, gantiwarna] = useState(["red", "orange", "lime"]);
 
   useEffect(() => {
-    console.log("asw");
-    // const label = data.target.label.value;
-    // const warna = { label, warna: 0 };
     const url = "http://localhost:3005/post";
     axios.get(url).then((respon) => {
       tambahtodo(respon.data);
@@ -77,7 +74,7 @@ export default function App() {
               <Card
                 key={idx}
                 bgColor={warna[data.warna % warna.length]}
-                ganti={ubah}
+                ubah={ubah}
                 idx={idx}
                 data={data}
               />

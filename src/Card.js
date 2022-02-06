@@ -15,7 +15,7 @@ export default function Card(tello) {
     >
       <button
         className="bg-blue-500 hover:bg-blue-700 text-black font-bold py-1 px-3 rounded"
-        onClick={() => tello.ganti(tello.data.id, tello.idx)}
+        onClick={() => tello.ubah(tello.data.id, tello.idx)}
         // onSubmit={clearInput}
       >
         COLOR
